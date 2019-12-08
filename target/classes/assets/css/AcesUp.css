@@ -1,0 +1,90 @@
+body{
+	border: 5px solid black;
+	background-image: url(https://wallpapercave.com/wp/sKLkafc.jpg);
+	 background-blend-mode: soft-light;
+	 background-size: cover;
+  opacity: 01;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+tr{
+width:100px;
+background-color: gray;
+}
+
+td{
+width:100px;
+height:20px;
+text-align:center;
+}
+
+.title{
+font-weight: bold;
+}
+
+.cardLocation{
+width: 100px;
+background-color:#F0F0F0;
+}
+.site-title a{
+    color: white;
+    font-size: 90px;
+    margin: 0px;
+    padding: 0px;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: lighter;
+    display: flex;
+    flex-wrap: nowrap;
+	position: relative;
+	top: 0px;
+	left: 300;	
+    width: 40%;
+}
+
+.header-image-container{
+ position: relative;
+	top: -120;
+	left: 0;
+	border-radius: 3;
+}
+
+table{
+	text-align: center;
+	margin-left:auto;
+	margin-right: auto;
+	width: 150;
+	border: 1px solid white;
+	color: black;
+	}
+#dealButton{
+	position:relative;
+    bottom:150px;
+	left: 100;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/casino-and-gambling-icons/489/Hand_Holding_Playing_Cards-2-512.png);
+    font-size: 17px;
+    border-radius: 8px;
+    right: 0px;
+    color: white;
+    width: 150px;
+    height: 150;
+}
+#move_from_to{
+	position:relative; 
+	bottom:500px;
+	width:100px;
+	left:100px;
+	color: white;
+	
+}
+#spanishButton{
+   position:relative;
+   bottom:500px;
+   left: 30%;
+    width: 70px;
+    height: 20px;
+    font size: 17px;
+}
+

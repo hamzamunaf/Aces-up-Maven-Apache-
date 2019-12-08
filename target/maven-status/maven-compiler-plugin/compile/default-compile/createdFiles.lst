@@ -1,0 +1,14 @@
+models/Game_es.class
+models/Card_es.class
+conf/Module.class
+conf/Routes.class
+models/Column.class
+models/Deck.class
+controllers/ApplicationControllerEs.class
+controllers/ApplicationController.class
+models/Game.class
+models/Column_es.class
+models/Card.class
+models/Cubierta.class
+models/Palos.class
+models/Suit.class

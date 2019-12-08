@@ -1,0 +1,216 @@
+<h1 class="site-title"><a href="#">Aces Up </a> </h1>
+<div class="header-image-container">
+    <img src="http://fatgirlyogaspokane.com/wp-content/uploads/2019/01/four-aces-poker-card-illustration-vector.jpg" width="100" height="200" >
+</div>
+
+<link href="/assets/css/AcesUp.css" rel="stylesheet">
+<script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
+
+<body>
+
+<table>
+    <tr class="title">
+        <td>Columna1</td>
+        <td>Columna2</td>
+        <td >Columna3</td>
+        <td >Columna4</td>
+    </tr>
+
+    <tr><td class="columnOfCards" id="c0">
+        <table>
+            <tr><td onclick="removeCard(0);" class="cardLocation l0"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l1"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l2"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l3"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l4"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l5"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l6"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l7"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l8"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l9"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l10"></td></tr>
+            <tr><td onclick="removeCard(0;"  class="cardLocation l11"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l12"></td></tr>
+            <tr><td onclick="removeCard(0);" class="cardLocation l13"></td></tr>
+        </table>
+    </td>
+        <td class="columnOfCards" id="c1">
+            <table>
+                <tr><td onclick="removeCard(1);" class="cardLocation l0"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l1"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l2"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l3"></td></tr>
+                <tr><td onclick="removeCard(1);"class="cardLocation l4"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l5"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l6"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l7"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l8"></td></tr>
+                <tr><td onclick="removeCard(1);" class="cardLocation l9"></td></tr>
+                <tr><td onclick="removeCard(1);"class="cardLocation l10"></td></tr>
+                <tr><td onclick="removeCard(1);"class="cardLocation l11"></td></tr>
+                <tr><td onclick="removeCard(1);"class="cardLocation l12"></td></tr>
+                <tr><td onclick="removeCard(1);"class="cardLocation l13"></td></tr>
+            </table>
+        </td>
+        <td class="columnOfCards" id="c2">
+            <table>
+                <tr><td onclick="removeCard(2);" class="cardLocation l0"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l1"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l2"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l3"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l4"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l5"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l6"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l7"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l8"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l9"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l10"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l11"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l12"></td></tr>
+                <tr><td onclick="removeCard(2);" class="cardLocation l13"></td></tr>
+            </table>
+        </td>
+        <td class="columnOfCards" id="c3">
+            <table>
+                <tr><td onclick="removeCard(3);" class="cardLocation l0"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l1"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l2"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l3"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l4"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l5"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l6"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l7"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l8"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l9"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l10"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l11"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l12"></td></tr>
+                <tr><td onclick="removeCard(3);" class="cardLocation l13"></td></tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<button id="dealButton">Acuerdo</button>
+
+<button id="helpButton" type="button">Ayuda</button>
+
+<button id="spanishButton"  onclick="history.back()" type="button" >English</button>
+
+<div id = move_from_to>
+    <BR>Moverse desde columna <input type="text" id="from_col"  /> a <input type="text" id="to_col"  /> <button id="moveButton">Move</button>
+</div>
+<script>
+$("#helpButton").click(function(){
+$.ajax({
+ url: "/espanol/dealgame_es",
+  type: "GET",
+  data: JSON.stringify(game_es),
+  success: function(){alert("Rules:\n -A card can be removed from the top of a stack if a card of the same suit of greater value is at the top of a different stack\n -The top card from any stack can be moved to an empty stack\n -The game is won when only Aces remain in play\n");
+        game_es = data;
+        display(data);},
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+});
+});
+
+var game_es;
+
+function display(game_es) {
+console.log(game_es);
+
+$( '.columnOfCards .cardLocation' ).html("");
+
+ $.each(game_es.columns_es[0].cards, function( key, val ) {
+        $( '#c0 .l'+key ).html(val.value + val.suit);
+    });
+
+ $.each(game_es.columns_es[1].cards, function( key, val ) {
+        $( '#c1 .l'+key ).html(val.value + val.suit);
+    });
+
+ $.each(game_es.columns_es[2].cards, function( key, val ) {
+        $( '#c2 .l'+key ).html(val.value + val.suit);
+    });
+
+ $.each(game_es.columns_es[3].cards, function( key, val ) {
+        $( '#c3 .l'+key ).html(val.value + val.suit);
+    });
+
+
+
+}
+
+$.getJSON("http://localhost:8080/espanol/game_es", function( data ) {
+game_es = data;
+display(game_es);
+});
+
+
+$("#dealButton").click(function(){
+$.ajax({
+  url: "/espanol/dealgame_es",
+  type: "POST",
+  data: JSON.stringify(game_es),
+  success: function(data, status){
+        console.log("Data: " + data + "\nStatus: " + status);
+        game_es = data;
+        display(game_es);
+        },
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+});
+});
+
+
+function removeCard(colNumber){
+$.ajax({
+type: "POST",
+url: "/espanol/removeCard/"+colNumber,
+data: JSON.stringify(game_es),
+success: function(data, status){console.log("Data: " + data + "\nStatus: " + status);
+game_es = data;
+display(game_es);},
+contentType:"application/json; charset=utf-8",
+dataType:"json",
+});
+
+}
+
+
+$("#Remove1").click(function(){
+    removeCard(0);
+});
+$("#Remove2").click(function(){
+    removeCard(1);
+});
+$("#Remove3").click(function(){
+    removeCard(2);
+});
+$("#Remove4").click(function(){
+    removeCard(3);
+});
+
+
+$("#moveButton").click(function(){
+var colFrom = $("#from_col").val()-1;
+var colTo = $("#to_col").val()-1;
+$.ajax({
+  type: "POST",
+  url: "/espanol/moveCard/"+colFrom+"/"+colTo,
+  data: JSON.stringify(game_es),
+  success: function(data, status){console.log("Data: " + data + "\nStatus: " + status);
+        game_es = data;
+        display(game_es);},
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+});
+});
+
+
+</script>
+
+
+
+</body>
+</html>
